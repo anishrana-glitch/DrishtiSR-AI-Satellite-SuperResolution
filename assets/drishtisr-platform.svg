@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+  <title id="title">DrishtiSR platform architecture</title>
+  <desc id="desc">A React web client connects to a FastAPI backend, which sends Sentinel-2 imagery to the Sentinel2SR inference pipeline and returns a super-resolved output and evaluation results.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09192d"/><stop offset="1" stop-color="#183e58"/></linearGradient>
+    <linearGradient id="web" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="api" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#6d28d9"/></linearGradient>
+    <linearGradient id="model" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#047857"/></linearGradient>
+    <filter id="shadow" x="-15%" y="-20%" width="130%" height="150%"><feDropShadow dx="0" dy="9" stdDeviation="8" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1200" height="470" rx="28" fill="url(#background)"/>
+  <text x="58" y="64" fill="#f4faff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">DrishtiSR Platform Architecture</text>
+  <text x="58" y="95" fill="#a9c5d7" font-family="Arial, Helvetica, sans-serif" font-size="16">Galaxious • local web application and model-inference workflow</text>
+  <g font-family="Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="58" y="166" width="238" height="178" rx="22" fill="url(#web)"/>
+    <text x="177" y="216" text-anchor="middle" font-size="28" fill="#eefdff">Web client</text><text x="177" y="251" text-anchor="middle" font-size="17" font-weight="700" fill="#062b4f">React • TypeScript</text><text x="177" y="278" text-anchor="middle" font-size="15" fill="#073052">Vite • Tailwind • MapLibre</text><text x="177" y="315" text-anchor="middle" font-size="14" fill="#e8f7ff">Upload imagery and view output</text>
+    <rect x="376" y="166" width="238" height="178" rx="22" fill="url(#api)"/>
+    <text x="495" y="216" text-anchor="middle" font-size="28" fill="#fff">API service</text><text x="495" y="251" text-anchor="middle" font-size="17" font-weight="700" fill="#f3e8ff">FastAPI • Uvicorn</text><text x="495" y="278" text-anchor="middle" font-size="15" fill="#f3e8ff">Request handling and orchestration</text><text x="495" y="315" text-anchor="middle" font-size="14" fill="#f3e8ff">Local development API</text>
+    <rect x="694" y="166" width="238" height="178" rx="22" fill="url(#model)"/>
+    <text x="813" y="216" text-anchor="middle" font-size="28" fill="#fff">Inference pipeline</text><text x="813" y="251" text-anchor="middle" font-size="17" font-weight="700" fill="#e9fff7">Sentinel2SR • PyTorch</text><text x="813" y="278" text-anchor="middle" font-size="15" fill="#e9fff7">4× reconstruction and evaluation</text><text x="813" y="315" text-anchor="middle" font-size="14" fill="#e9fff7">Satellite image processing</text>
+    <rect x="1012" y="166" width="130" height="178" rx="22" fill="#f7b955"/>
+    <text x="1077" y="214" text-anchor="middle" font-size="25" font-weight="700" fill="#352304">Output</text><text x="1077" y="250" text-anchor="middle" font-size="16" fill="#352304">2.5 m</text><text x="1077" y="276" text-anchor="middle" font-size="14" fill="#352304">4× SR</text><text x="1077" y="312" text-anchor="middle" font-size="13" fill="#352304">results</text>
+  </g>
+  <g fill="none" stroke="#a7e7ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M307 255h49"/><path d="m346 245 10 10-10 10"/><path d="M625 255h49"/><path d="m664 245 10 10-10 10"/><path d="M943 255h49"/><path d="m982 245 10 10-10 10"/></g>
+  <rect x="140" y="390" width="920" height="40" rx="20" fill="#12344a" stroke="#315f79"/>
+  <text x="600" y="416" text-anchor="middle" fill="#cfebf8" font-family="Arial, Helvetica, sans-serif" font-size="15">Validation plan: PSNR • SSIM • MAE • RMSE • SAM • spectral, geographic, and hallucination checks</text>
+</svg>
